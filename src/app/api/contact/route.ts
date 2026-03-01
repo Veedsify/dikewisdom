@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
     });
 
     const mailOptions = {
-      from: `"Portfolio Contact" <${process.env.SMTP_USER || 'noreply@dikewisdom.com'}>`,
+      from: `"Portfolio Contact" <noreply@dikewisdom.com>`,
       to: [process.env.CONTACT_EMAIL || 'me@dikewisdom.com', 'dikewisdom787@gmail.com'],
       replyTo: email,
       subject: `[Portfolio] ${subject}`,
