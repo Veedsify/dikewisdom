@@ -1,104 +1,104 @@
 [
-  {
-    "year": "2023 – Present",
-    "entries": [
-      {
-        "title": "Freelance Web & Platform Tester",
-        "company": "Various Online Platforms (Remote)",
-        "description": "Perform end-to-end functional and usability testing on casino websites, betting apps, gaming platforms, and other web-based products from a real user perspective.",
-        "bullets": [
-          "Execute daily testing routines on casino and betting platforms covering deposits, withdrawals, gameplay, and payment flow validations",
-          "Test casino game functionality, slot mechanics, live dealer interfaces, and sports betting features for reliability and user experience",
-          "Verify platform stability, page responsiveness, and feature functionality across devices and browsers on gaming and betting apps",
-          "Test customer support channels, live chat systems, and response flows for quality assurance on casino platforms",
-          "Conduct competitor casino and betting website analysis to identify UX gaps and feature discrepancies",
-          "Record and deliver detailed testing results via screen recordings, annotated screenshots, and structured feedback reports",
-          "Collaborate with operations teams through regular calls to align on testing priorities and incident resolution",
-          "Perform regression testing during critical updates to validate issue fixes and platform stability on casino and gaming sites"
+    {
+        "year": "2023 – Present",
+        "entries": [
+            {
+                "title": "Freelance Web & Casino Platform Tester",
+                "company": "Various Online Platforms (Remote)",
+                "description": "Perform end-to-end functional and usability testing on casino websites, betting apps, gaming platforms, and other web-based products from a real user perspective.",
+                "bullets": [
+                    "Execute daily testing routines on casino and betting platforms covering deposits, withdrawals, gameplay, and payment flow validations",
+                    "Test casino game functionality, slot mechanics, live dealer interfaces, and sports betting features for reliability and user experience",
+                    "Verify platform stability, page responsiveness, and feature functionality across devices and browsers on gaming and betting apps",
+                    "Test customer support channels, live chat systems, and response flows for quality assurance on casino platforms",
+                    "Conduct competitor casino and betting website analysis to identify UX gaps and feature discrepancies",
+                    "Record and deliver detailed testing results via screen recordings, annotated screenshots, and structured feedback reports",
+                    "Collaborate with operations teams through regular calls to align on testing priorities and incident resolution",
+                    "Perform regression testing during critical updates to validate issue fixes and platform stability on casino and gaming sites"
+                ]
+            },
+            {
+                "title": "Senior Developer & Platform Engineer",
+                "company": "NSTM (Nigerian Society of Travel Medicine)",
+                "description": "Built and launched the official NSTM website from initial concept through full deployment.",
+                "bullets": [
+                    "Designed and implemented responsive UI/UX for optimal visitor experience across devices",
+                    "Developed and integrated core features including membership, events, resources, and informational content",
+                    "Managed backend functionality, CMS architecture, and dynamic content workflows",
+                    "Oversaw hosting infrastructure, DNS configuration, server management, and performance optimization",
+                    "Administer regular updates, security patches, and technical troubleshooting to maintain high uptime",
+                    "Monitor site analytics and user behavior to continually enhance usability and accessibility"
+                ]
+            }
         ]
-      },
-      {
-        "title": "Senior Developer & Platform Engineer",
-        "company": "NSTM (Nigerian Society of Travel Medicine)",
-        "description": "Built and launched the official NSTM website from initial concept through full deployment.",
-        "bullets": [
-          "Designed and implemented responsive UI/UX for optimal visitor experience across devices",
-          "Developed and integrated core features including membership, events, resources, and informational content",
-          "Managed backend functionality, CMS architecture, and dynamic content workflows",
-          "Oversaw hosting infrastructure, DNS configuration, server management, and performance optimization",
-          "Administer regular updates, security patches, and technical troubleshooting to maintain high uptime",
-          "Monitor site analytics and user behavior to continually enhance usability and accessibility"
+    },
+    {
+        "year": "2024 – Present",
+        "entries": [
+            {
+                "title": "Senior Developer & Pen Tester",
+                "company": "Paymefans",
+                "description": "Architected and built an 18+ creator-monetization platform focused on Nigerian/African creators.",
+                "bullets": [
+                    "Designed multiple monetization streams: subscriptions, tips, private messages, and pay-per-view",
+                    "Built real-time messaging and notification systems with Socket.IO",
+                    "Oversaw infrastructure setups, performance optimization, deployment, and security for high-availability environments on AWS",
+                    "Conducted penetration testing and security audits to harden the platform"
+                ]
+            },
+            {
+                "title": "Senior Developer & IT Personnel",
+                "company": "Hetdynamic (Nigerian Immigration Company)",
+                "description": "Led end-to-end full-stack development and infrastructure operations.",
+                "bullets": [
+                    "Architected and deployed scalable web applications using React, Next.js, Node.js, Express.js, and PostgreSQL/MySQL",
+                    "Designed RESTful APIs and real-time systems using Socket.IO and Redis",
+                    "Implemented secure authentication, role-based access control, and payment integrations",
+                    "Managed VPS and AWS cloud environments, including CI/CD pipelines, Docker containerization, server configuration, DNS, and load balancing",
+                    "Built and maintained admin dashboards, analytics tools, subscription systems, and tiered pricing models",
+                    "Ensured system scalability, reliability, uptime, and rapid troubleshooting to support continuous user growth"
+                ]
+            }
         ]
-      }
-    ]
-  },
-  {
-    "year": "2024 – Present",
-    "entries": [
-      {
-        "title": "Senior Developer & Pen Tester",
-        "company": "Paymefans",
-        "description": "Architected and built an 18+ creator-monetization platform focused on Nigerian/African creators.",
-        "bullets": [
-          "Designed multiple monetization streams: subscriptions, tips, private messages, and pay-per-view",
-          "Built real-time messaging and notification systems with Socket.IO",
-          "Oversaw infrastructure setups, performance optimization, deployment, and security for high-availability environments on AWS",
-          "Conducted penetration testing and security audits to harden the platform"
+    },
+    {
+        "year": "2021 – 2024",
+        "entries": [
+            {
+                "title": "Head Instructor",
+                "company": "Sacred Heart Computer Center",
+                "description": "Delivered instruction in web development, IT fundamentals, and digital skills to learners.",
+                "bullets": [
+                    "Designed syllabus and curriculum for web development and IT fundamentals courses",
+                    "Mentored students through hands-on projects and real-world application development",
+                    "Maintained lab and IT environment for optimal learning experiences"
+                ]
+            },
+            {
+                "title": "Lead Developer",
+                "company": "Jeanpay Africa",
+                "description": "Architecting and building a multi-currency exchange platform with Go, Next.js, and PostgreSQL.",
+                "bullets": [
+                    "Built NGN ↔ GHS currency converter with Paystack and Momo wallet integration",
+                    "Implemented ACID-compliant transaction processing for financial integrity",
+                    "Designed SSO authentication and multi-currency wallet system"
+                ]
+            }
         ]
-      },
-      {
-        "title": "Senior Developer & IT Personnel",
-        "company": "Hetdynamic (Nigerian Immigration Company)",
-        "description": "Led end-to-end full-stack development and infrastructure operations.",
-        "bullets": [
-          "Architected and deployed scalable web applications using React, Next.js, Node.js, Express.js, and PostgreSQL/MySQL",
-          "Designed RESTful APIs and real-time systems using Socket.IO and Redis",
-          "Implemented secure authentication, role-based access control, and payment integrations",
-          "Managed VPS and AWS cloud environments, including CI/CD pipelines, Docker containerization, server configuration, DNS, and load balancing",
-          "Built and maintained admin dashboards, analytics tools, subscription systems, and tiered pricing models",
-          "Ensured system scalability, reliability, uptime, and rapid troubleshooting to support continuous user growth"
+    },
+    {
+        "year": "2019 – 2021",
+        "entries": [
+            {
+                "title": "Full-Stack Web Developer",
+                "company": "Freelance / Various Clients",
+                "description": "Built Laravel, React, and WordPress applications for Nigerian businesses.",
+                "bullets": [
+                    "Developed e-commerce platforms, corporate websites, and custom business tools",
+                    "Built custom WordPress themes and Laravel backend systems",
+                    "Managed VPS hosting, domain configuration, and client deployments"
+                ]
+            }
         ]
-      }
-    ]
-  },
-  {
-    "year": "2021 – 2024",
-    "entries": [
-      {
-        "title": "Head Instructor",
-        "company": "Sacred Heart Computer Center",
-        "description": "Delivered instruction in web development, IT fundamentals, and digital skills to learners.",
-        "bullets": [
-          "Designed syllabus and curriculum for web development and IT fundamentals courses",
-          "Mentored students through hands-on projects and real-world application development",
-          "Maintained lab and IT environment for optimal learning experiences"
-        ]
-      },
-      {
-        "title": "Lead Developer",
-        "company": "Jeanpay Africa",
-        "description": "Architecting and building a multi-currency exchange platform with Go, Next.js, and PostgreSQL.",
-        "bullets": [
-          "Built NGN ↔ GHS currency converter with Paystack and Momo wallet integration",
-          "Implemented ACID-compliant transaction processing for financial integrity",
-          "Designed SSO authentication and multi-currency wallet system"
-        ]
-      }
-    ]
-  },
-  {
-    "year": "2019 – 2021",
-    "entries": [
-      {
-        "title": "Full-Stack Web Developer",
-        "company": "Freelance / Various Clients",
-        "description": "Built Laravel, React, and WordPress applications for Nigerian businesses.",
-        "bullets": [
-          "Developed e-commerce platforms, corporate websites, and custom business tools",
-          "Built custom WordPress themes and Laravel backend systems",
-          "Managed VPS hosting, domain configuration, and client deployments"
-        ]
-      }
-    ]
-  }
+    }
 ]
