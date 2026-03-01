@@ -14,12 +14,12 @@ const AboutSection: React.FC = () => {
           <SectionTitle id="about-title" title="About Me" />
           <div className="lg:max-w-screen-md lg:mx-auto py-14 lg:py-20">
             <p className="!m-0 text-3xl lg:text-4xl text-gray-950 dark:text-gray-200 font-heading">
-              Full-stack developer and infrastructure engineer based in Lagos, Nigeria.{' '}
+              Web platform tester, full-stack developer, and infrastructure engineer based in Lagos, Nigeria.{' '}
               <span className="animate animate-opacity text-gray-600 dark:text-gray-400">
-                I specialize in building scalable web applications, real-time systems,
-                and cloud infrastructure. From fintech platforms handling daily transactions
-                to content monetization systems serving thousands of users — I bring ideas
-                to life with clean code and robust architecture.
+                I specialize in testing casino websites, betting apps, and gaming platforms
+                for stability and usability, while also building scalable web applications. From validating
+                payment flows and gameplay on casino and betting platforms to building fintech
+                systems handling daily transactions — I ensure quality at every level.
               </span>
             </p>
             <div className="mt-10">

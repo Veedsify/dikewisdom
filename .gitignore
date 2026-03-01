@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+PREVIOUS_CONTENT_BACKUP.md
+*.docx

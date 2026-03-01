@@ -1,7 +1,22 @@
 [
   {
-    "year": "2025 – Present",
+    "year": "2023 – Present",
     "entries": [
+      {
+        "title": "Freelance Web & Platform Tester",
+        "company": "Various Online Platforms (Remote)",
+        "description": "Perform end-to-end functional and usability testing on casino websites, betting apps, gaming platforms, and other web-based products from a real user perspective.",
+        "bullets": [
+          "Execute daily testing routines on casino and betting platforms covering deposits, withdrawals, gameplay, and payment flow validations",
+          "Test casino game functionality, slot mechanics, live dealer interfaces, and sports betting features for reliability and user experience",
+          "Verify platform stability, page responsiveness, and feature functionality across devices and browsers on gaming and betting apps",
+          "Test customer support channels, live chat systems, and response flows for quality assurance on casino platforms",
+          "Conduct competitor casino and betting website analysis to identify UX gaps and feature discrepancies",
+          "Record and deliver detailed testing results via screen recordings, annotated screenshots, and structured feedback reports",
+          "Collaborate with operations teams through regular calls to align on testing priorities and incident resolution",
+          "Perform regression testing during critical updates to validate issue fixes and platform stability on casino and gaming sites"
+        ]
+      },
       {
         "title": "Senior Developer & Platform Engineer",
         "company": "NSTM (Nigerian Society of Travel Medicine)",

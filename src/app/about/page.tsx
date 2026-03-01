@@ -10,7 +10,7 @@ import Socials from '@/components/Socials';
 export const metadata: Metadata = {
     title: 'About Me',
     description:
-        'Learn about Dike Wisdom — a full-stack developer, infrastructure engineer, and technical lead based in Lagos, Nigeria. Specializing in React, Node.js, Go, and cloud infrastructure.',
+        'Learn about Dike Wisdom — a web platform tester, full-stack developer, and infrastructure engineer based in Lagos, Nigeria. Specializing in web platform QA testing, React, Node.js, Go, and cloud infrastructure.',
 };
 
 export default function AboutPage() {
@@ -39,21 +39,30 @@ export default function AboutPage() {
                                             About Me
                                         </h1>
                                         <p className="text-xl text-gray-600 dark:text-gray-400 !mt-0">
-                                            Full-Stack Developer &amp; Infrastructure Engineer
+                                            Web Platform Tester, Full-Stack Developer &amp; Infrastructure Engineer
                                         </p>
                                         <p className="text-lg">
-                                            I&apos;m Dike Wisdom, a professional full-stack web developer, infrastructure
-                                            engineer, and technical lead based in Lagos, Nigeria. With strong experience
-                                            across the entire development stack — from React and Next.js on the frontend
-                                            to Node.js, Go, and Laravel on the backend — I build applications that are
-                                            both performant and maintainable.
+                                            I&apos;m Dike Wisdom, a web platform tester, full-stack developer, and
+                                            infrastructure engineer based in Lagos, Nigeria. I bring a unique
+                                            combination of hands-on QA testing expertise and deep technical knowledge
+                                            I don&apos;t just build platforms, I rigorously test them especially
+                                            casino websites, betting apps, and gaming platforms for stability,
+                                            usability, and real-world reliability.
                                         </p>
                                         <p className="text-lg">
-                                            My work spans fintech platforms processing daily currency exchanges, content
-                                            monetization systems with real-time Socket.IO messaging, healthcare advisory
-                                            platforms deployed on AWS with Kubernetes, and e-commerce solutions for
-                                            Nigerian businesses. I&apos;m passionate about Linux-first workflows
-                                            (especially Arch Linux), server hardening, and infrastructure automation.
+                                            My testing experience covers end-to-end validation of casino and betting
+                                            platforms including payment flow testing (deposits, withdrawals), game
+                                            functionality verification, slot and live dealer testing, sports betting
+                                            feature checks, cross-browser compatibility, customer support channel
+                                            audits, and competitor casino benchmarking. I document findings through
+                                            detailed screen recordings, annotated screenshots, and structured reports.
+                                        </p>
+                                        <p className="text-lg">
+                                            On the development side, my work spans fintech platforms processing daily
+                                            currency exchanges, content monetization systems with real-time messaging,
+                                            healthcare advisory platforms on AWS, and e-commerce solutions for
+                                            Nigerian businesses. This dual perspective as both a builder and tester
+                                            gives me an exceptional eye for quality and user experience.
                                         </p>
                                         <p className="text-lg">
                                             I believe in writing clean, well-documented code that other developers can

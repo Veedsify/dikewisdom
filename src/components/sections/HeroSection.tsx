@@ -30,12 +30,12 @@ const HeroSection: React.FC = () => {
                                     id="hero-title"
                                     className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-regular !m-0 font-heading"
                                 >
-                                    Full-Stack Developer &amp; Infrastructure Engineer
+                                    Web Platform Tester, Full-Stack Developer &amp; DevOps Engineer
                                 </h1>
                                 <p className="!mb-0 !mt-0 max-w-xl mx-auto text-xl font-medium">
-                                    Based in Lagos, Nigeria. I build <b>scalable web applications</b>,{' '}
-                                    <b>real-time systems</b>, and <b>cloud infrastructure</b> — from the
-                                    first line of code to production deployment.
+                                    Based in Lagos, Nigeria. I <b>test casino, gaming &amp; betting platforms</b> for stability and usability,
+                                    build <b>scalable web applications</b>, and manage <b>cloud infrastructure</b> — from
+                                    QA validation to production deployment.
                                 </p>
                                 <div className="flex flex-wrap justify-center gap-4">
                                     <Link href="/contact" className="btn" role="button">

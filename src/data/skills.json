@@ -114,6 +114,32 @@
         ]
     },
     {
+        "category": "QA & Web Testing",
+        "icon": "testing",
+        "skills": [
+            {
+                "name": "Functional & Usability Testing",
+                "level": 90
+            },
+            {
+                "name": "Cross-Browser / Device Testing",
+                "level": 88
+            },
+            {
+                "name": "Payment Flow Testing",
+                "level": 85
+            },
+            {
+                "name": "Bug Reporting & Documentation",
+                "level": 92
+            },
+            {
+                "name": "Regression & Smoke Testing",
+                "level": 85
+            }
+        ]
+    },
+    {
         "category": "Security & Tools",
         "icon": "security",
         "skills": [
