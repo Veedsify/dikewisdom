@@ -49,10 +49,10 @@ export default function ProjectsPage() {
                                                     className="w-full aspect-[16/8] object-cover object-center group-hover:scale-105 transition-transform duration-500"
                                                 />
                                                 <span className={`absolute top-3 right-3 px-2 py-0.5 text-xs font-medium rounded-full ${project.status === 'live'
-                                                    ? 'bg-emerald-100 text-emerald-700'
+                                                    ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300'
                                                     : project.status === 'in-development'
-                                                        ? 'bg-amber-100 text-amber-700'
-                                                        : 'bg-gray-100 text-gray-600'
+                                                        ? 'bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-300'
+                                                        : 'bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-400'
                                                     }`}>
                                                     {project.status === 'live' ? '✅ Live' : project.status === 'in-development' ? '🔨 In Dev' : 'Discontinued'}
                                                 </span>

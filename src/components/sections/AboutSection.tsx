@@ -15,7 +15,7 @@ const AboutSection: React.FC = () => {
           <div className="lg:max-w-screen-md lg:mx-auto py-14 lg:py-20">
             <p className="!m-0 text-3xl lg:text-4xl text-gray-950 dark:text-gray-200 font-heading">
               Web platform tester, full-stack developer, and infrastructure engineer based in Lagos, Nigeria.{' '}
-              <span className="animate animate-opacity text-gray-600 dark:text-gray-400">
+              <span className="text-gray-600 dark:text-gray-400">
                 I specialize in testing casino websites, betting apps, and gaming platforms
                 for stability and usability, while also building scalable web applications. From validating
                 payment flows and gameplay on casino and betting platforms to building fintech

@@ -36,7 +36,7 @@ const ExperienceSection: React.FC = () => {
             {item.entries.map((entry, entryIndex) => (
               <div
                 key={entryIndex}
-                className="pb-8 last:pb-0 animate-in-and-out"
+                className="pb-8 last:pb-0"
               >
                 <dt className="text-xl sm:text-2xl md:text-3xl text-gray-950 dark:text-gray-200 font-semibold font-heading leading-tight">
                   {entry.title}

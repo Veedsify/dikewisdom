@@ -12,7 +12,7 @@ const HeroSection: React.FC = () => {
                         <div className="lg:max-w-screen-md lg:mx-auto grid text-center gap-10 isolate">
                             <div className="grid">
                                 <span className="animated-border">Available for work 🎉</span>
-                                <figure className="relative w-32 h-32 mx-auto grid !mb-0 animate animate-out-up">
+                                <figure className="relative w-32 h-32 mx-auto grid !mb-0">
                                     <Image
                                         src="/images/avatar.jpeg"
                                         alt="Dike Wisdom's profile"
@@ -24,7 +24,7 @@ const HeroSection: React.FC = () => {
                                     <span className="rounded-full block w-3 h-3 bg-emerald-400 absolute bottom-3 right-3 border-2 border-white dark:border-gray-950"></span>
                                 </figure>
                             </div>
-                            <div className="grid gap-7 animate animate-out-up">
+                            <div className="grid gap-7">
                                 <p className="!my-0 text-xl">Hi, I&apos;m Dike Wisdom 👋</p>
                                 <h1
                                     id="hero-title"
