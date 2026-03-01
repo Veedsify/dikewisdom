@@ -1,0 +1,74 @@
+[
+  {
+    "image": "/images/portfolio-1.webp",
+    "title": "Weather App",
+    "description": "Weather Ease is a modern weather forecasting app designed for simplicity and accessibility. My role involved developing the frontend user interface, ensuring responsiveness across devices, and implementing clean, scalable CSS. I also collaborated closely with the design team to translate high-fidelity mockups into an engaging and user-friendly experience. The result was an intuitive application that provided essential weather data with minimal clutter, focusing on usability and visual appeal.",
+    "website": "https://www.google.co.uk",
+    "meta": [
+      {
+        "name": "category",
+        "value": "Web Development"
+      },
+      {
+        "name": "client",
+        "value": "Weather Ease"
+      },
+      {
+        "name": "tags",
+        "value": "UX/UI Design"
+      },
+      {
+        "name": "launched",
+        "value": "June 2024"
+      }
+    ]
+  },
+  {
+    "image": "/images/portfolio-2.webp",
+    "title": "Finance Dashboard",
+    "description": "InFinance is a personal finance management app aimed at streamlining budgeting and financial tracking. For this project, I developed the frontend architecture using modern tools, ensuring smooth interactions and dynamic data visualizations. My contributions included integrating real-time API data, designing reusable components for financial graphs and cards, and optimizing performance for mobile devices. The final product delivered a seamless financial management experience with a focus on clarity and interactivity.",
+    "website": "https://www.google.co.uk",
+    "meta": [
+      {
+        "name": "category",
+        "value": "App Development"
+      },
+      {
+        "name": "client",
+        "value": "InFinance"
+      },
+      {
+        "name": "tags",
+        "value": "Mobile App"
+      },
+      {
+        "name": "launched",
+        "value": "May 2024"
+      }
+    ]
+  },
+  {
+    "image": "/images/portfolio-3.webp",
+    "title": "Delivery Platform",
+    "description": "Green Courier is a B2B delivery app designed for efficient package tracking and order management. I was responsible for implementing the app's frontend, including map integration for real-time courier tracking and the user dashboard. Working alongside the UX team, I ensured the design remained intuitive and accessible while addressing complex functionality requirements. My involvement also included optimising the app for fast load times and creating reusable components for future scalability.",
+    "website": "https://www.google.co.uk",
+    "meta": [
+      {
+        "name": "category",
+        "value": "Web Development"
+      },
+      {
+        "name": "client",
+        "value": "Green Courier"
+      },
+      {
+        "name": "tags",
+        "value": "UX/UI Design"
+      },
+      {
+        "name": "launched",
+        "value": "Febuary 2024"
+      }
+    ]
+  }
+]

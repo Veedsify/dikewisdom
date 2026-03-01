@@ -1,0 +1,27 @@
+[
+  {
+    "quote": "Dike delivered an incredibly robust payment platform that handles thousands of daily transactions flawlessly. His full-stack expertise and understanding of fintech requirements made Jeanpay Africa a reality.",
+    "author": "Jeanpay Africa Team",
+    "role": "Fintech Startup"
+  },
+  {
+    "quote": "Working with Wisdom was a game-changer for our platform. He architected the real-time messaging system, handled AWS infrastructure, and delivered a scalable product that our creators love.",
+    "author": "Paymefans Stakeholders",
+    "role": "Content Platform"
+  },
+  {
+    "quote": "Dike's ability to handle both frontend and backend with equal expertise is rare. He built our entire e-commerce platform from scratch, complete with admin dashboard and payment integration.",
+    "author": "Rolux Accessories",
+    "role": "E-Commerce Client"
+  },
+  {
+    "quote": "His infrastructure skills are impressive. From Docker containerization to Kubernetes orchestration and AWS deployment, Dike ensured our healthcare platform is always available and performant.",
+    "author": "TMAG Team",
+    "role": "Healthcare Advisory"
+  },
+  {
+    "quote": "Professional, responsive, and technically brilliant. Dike modernized our entire web platform with zero downtime during the migration. The new system is faster and more user-friendly.",
+    "author": "NSTM Committee",
+    "role": "Medical Organization"
+  }
+]

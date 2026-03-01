@@ -1,0 +1,155 @@
+[
+    {
+        "slug": "jeanpay-africa",
+        "title": "Jeanpay Africa",
+        "tagline": "NGN ↔ GHS Currency Converter with Paystack & Momo Wallets",
+        "description": "Currency exchange web app with multi-currency support, SSO, and customer ACID transactions. Built from the first line of code to a scalable, production-ready application.",
+        "longDescription": "Jeanpay Africa is a comprehensive currency exchange platform enabling seamless NGN to GHS conversions. The platform integrates with Paystack for Nigerian payments and Mobile Money (Momo) wallets for Ghanaian transactions. Features include single sign-on authentication, ACID-compliant transaction processing, real-time exchange rate updates, and a multi-currency wallet system. Built with a focus on financial security, data integrity, and scalability.",
+        "image": "/images/projects/jeanpay.png",
+        "techStack": [
+            "Go",
+            "Next.js",
+            "PostgreSQL",
+            "Paystack",
+            "Redis",
+            "Docker"
+        ],
+        "category": "Fintech",
+        "status": "live",
+        "liveUrl": "https://jeanpay.africa",
+        "featured": true,
+        "highlights": [
+            "Multi-currency wallet system with real-time exchange rates",
+            "ACID-compliant transaction processing for financial integrity",
+            "SSO authentication with secure session management",
+            "Integrated Paystack & Momo payment gateways"
+        ]
+    },
+    {
+        "slug": "paymefans",
+        "title": "Paymefans",
+        "tagline": "Africa's Content Monetization Platform",
+        "description": "Empowering African creators with multiple monetization streams: subscriptions, tips, private messages, and more. Focused on the Nigeria & African creator economy.",
+        "longDescription": "Paymefans is a content monetization platform designed specifically for the African creator economy. The platform provides creators with diverse revenue streams including subscriptions, one-time tips, pay-per-view content, and private messaging. Built with real-time features using Socket.IO for live interactions, AWS infrastructure for scalability, and MongoDB for flexible content storage. The platform handles media uploads, content delivery via CDN, and secure payment processing.",
+        "image": "/images/projects/paymefans.png",
+        "techStack": [
+            "Node.js",
+            "React",
+            "MongoDB",
+            "AWS",
+            "Socket.IO",
+            "Redis"
+        ],
+        "category": "SaaS Platform",
+        "status": "live",
+        "liveUrl": "https://paymefans.com",
+        "featured": true,
+        "highlights": [
+            "Real-time messaging and notifications with Socket.IO",
+            "Multiple monetization streams for content creators",
+            "AWS infrastructure with auto-scaling and CDN",
+            "Secure payment processing with escrow system"
+        ]
+    },
+    {
+        "slug": "tmag",
+        "title": "Travel Medicine Advisory Global (TMAG)",
+        "tagline": "Travel Health Plans for Companies & Individuals",
+        "description": "A comprehensive travel medicine advisory platform helping companies and individuals create travel health plans with real-time health data integration.",
+        "longDescription": "TMAG is an enterprise-grade travel medicine advisory platform that generates personalized travel health plans for organizations and individual travelers. The system integrates with global health databases, provides country-specific vaccination requirements, and manages corporate travel health compliance. Built on Spring Boot with a React frontend, deployed on AWS with Kubernetes orchestration for high availability.",
+        "image": "/images/projects/tmag.png",
+        "techStack": [
+            "Spring Boot",
+            "React",
+            "PostgreSQL",
+            "Redis",
+            "AWS",
+            "Kubernetes",
+            "Docker",
+            "Cloudflare"
+        ],
+        "liveUrl": "https://tmag.vercel.app",
+        "category": "Healthcare",
+        "status": "in-development",
+        "featured": true,
+        "highlights": [
+            "Kubernetes-orchestrated microservices architecture",
+            "Cloudflare load balancing for global availability",
+            "Real-time health data integration",
+            "Corporate travel compliance management"
+        ]
+    },
+    {
+        "slug": "nstm",
+        "title": "NSTM - Nigerian Travel Medicine",
+        "tagline": "Nigerian Travel Medicine Website Overhaul",
+        "description": "Complete website overhaul for the Nigerian Society of Travel Medicine, modernizing the platform with Laravel and Inertia React.",
+        "longDescription": "A comprehensive redesign and rebuild of the Nigerian Society of Travel Medicine website. Migrated from a legacy system to a modern Laravel backend with Inertia.js and React frontend. Features include member management, event scheduling, resource library, and certification tracking for travel medicine professionals across Nigeria.",
+        "image": "/images/projects/nstm.png",
+        "techStack": [
+            "Laravel",
+            "React",
+            "Inertia.js",
+            "Tailwind CSS",
+            "MySQL"
+        ],
+        "category": "Healthcare",
+        "status": "live",
+        "liveUrl": "https://nstm.org.ng",
+        "featured": false,
+        "highlights": [
+            "Legacy system migration with zero downtime",
+            "Member management and certification tracking",
+            "Event scheduling and resource library",
+            "Server-side rendering with Inertia.js"
+        ]
+    },
+    {
+        "slug": "rolux-accessories",
+        "title": "Rolux Accessories",
+        "tagline": "Local E-Commerce Platform for Nigerian Vendors",
+        "description": "E-commerce platform built for Nigerian vendors with inventory management, order processing, and local payment integration.",
+        "longDescription": "Rolux Accessories is a full-featured e-commerce platform tailored for the Nigerian market. Built with Laravel and Livewire for reactive server-side UI, with FilamentPHP powering the admin dashboard. Features include multi-vendor support, inventory management, order tracking, and integration with local payment providers.",
+        "image": "/images/projects/roluxe.png",
+        "techStack": [
+            "Laravel",
+            "Livewire",
+            "FilamentPHP",
+            "MySQL",
+            "Tailwind CSS"
+        ],
+        "liveUrl": "https://roluxeaccessories.com",
+        "category": "E-Commerce",
+        "status": "live",
+        "featured": false,
+        "highlights": [
+            "Multi-vendor marketplace functionality",
+            "FilamentPHP admin dashboard",
+            "Local payment gateway integration",
+            "Real-time inventory management with Livewire"
+        ]
+    },
+    {
+        "slug": "hetdynamic",
+        "title": "Hetdynamic",
+        "tagline": "Nigerian Immigration Company Platform",
+        "description": "Corporate platform for a Nigerian immigration services company with client management, document processing, and application tracking.",
+        "longDescription": "Hetdynamic is a comprehensive platform for a Nigerian immigration services company. The system manages client applications, document verification, appointment scheduling, and status tracking. Built with Laravel and PostgreSQL for robust data handling, with Redis for caching and session management.",
+        "image": "/images/projects/hetdynamic.png",
+        "techStack": [
+            "Laravel",
+            "PostgreSQL",
+            "Redis",
+            "Tailwind CSS"
+        ],
+        "category": "Business",
+        "status": "live",
+        "featured": false,
+        "highlights": [
+            "Client application management system",
+            "Document verification workflow",
+            "Appointment scheduling",
+            "Redis-powered caching for performance"
+        ]
+    }
+]

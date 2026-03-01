@@ -1,0 +1,97 @@
+---
+title: "Why I Use Arch Linux as My Daily Development Environment"
+date: "2024-12-10"
+excerpt: "A look into my Linux-first development workflow — why I chose Arch Linux, how I configure it for full-stack development, and the productivity gains from a customized environment."
+tags: ["Linux", "Arch Linux", "Developer Tools", "Workflow"]
+---
+
+# Why I Use Arch Linux as My Daily Development Environment
+
+Every developer has opinions about their tools. Mine is this: **nothing beats a Linux environment you've built yourself**. I've been running Arch Linux as my primary development OS for years, and it has fundamentally shaped how I approach software engineering.
+
+## Why Arch?
+
+### 1. Rolling Release Model
+
+No more waiting for Ubuntu LTS upgrades. With Arch, I'm always on the latest kernel, the latest Docker, the latest Node.js. When Go 1.22 dropped, I had it running within hours — not weeks.
+
+```bash
+sudo pacman -Syu  # That's it. Everything updated.
+```
+
+### 2. Minimal by Default
+
+Arch installs nothing you don't ask for. My development machine runs exactly what I need:
+
+- **Window Manager**: i3/Sway (tiling WM for maximum screen real estate)
+- **Terminal**: Alacritty (GPU-accelerated, blazing fast)
+- **Editor**: Neovim + VS Code (depending on the project)
+- **Shell**: Zsh with minimal plugins
+
+### 3. The AUR (Arch User Repository)
+
+Need an obscure tool? It's probably in the AUR:
+
+```bash
+yay -S aws-cli-v2  # AWS CLI
+yay -S kubectl     # Kubernetes CLI
+yay -S postman-bin # API testing
+```
+
+## My Development Stack
+
+```bash
+# Core tools
+sudo pacman -S docker docker-compose nodejs npm go postgresql redis
+
+# Development utilities
+sudo pacman -S git lazygit ripgrep fd bat httpie jq
+
+# System monitoring
+sudo pacman -S htop btop neofetch
+```
+
+## Docker-First Workflow
+
+I run all project databases and services in Docker containers. This keeps my system clean and projects isolated:
+
+```yaml
+# docker-compose.yml for a typical project
+services:
+  postgres:
+    image: postgres:16-alpine
+    ports: ["5432:5432"]
+    volumes: ["pgdata:/var/lib/postgresql/data"]
+  redis:
+    image: redis:7-alpine
+    ports: ["6379:6379"]
+```
+
+## Terminal Multiplexing with tmux
+
+Every project gets its own tmux session:
+
+```bash
+# Start a project session
+tmux new-session -s jeanpay -d
+tmux send-keys -t jeanpay "cd ~/projects/jeanpay && docker-compose up -d" Enter
+tmux split-window -h -t jeanpay
+tmux send-keys -t jeanpay "npm run dev" Enter
+```
+
+## The Productivity Payoff
+
+After investing time in my Arch setup:
+
+- **Boot to coding**: Under 30 seconds
+- **No distractions**: No bloatware, no unwanted updates
+- **Full control**: I understand every service running on my machine
+- **Consistent environment**: What works locally works in Docker, works in production
+
+## Conclusion
+
+Arch Linux isn't for everyone — but for developers who want to understand their tools deeply and optimize their workflow, it's unbeatable. The investment in learning pays compound interest in productivity and system understanding.
+
+---
+
+*Curious about Linux-first development? [Drop me a message](/contact) — I'm always happy to share configs and tips.*
