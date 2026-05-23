@@ -1,82 +1,117 @@
 import React from 'react';
 import Link from 'next/link';
-import Logo from './Logo';
-import Socials from './Socials';
 import menuData from '@/data/menu.json';
+import socialsData from '@/data/socials.json';
+import contactData from '@/data/contact.json';
 
-interface NavItem {
-  url: string;
-  label: string;
-}
+interface NavItem { url: string; label: string }
+interface Social { name: string; link: string; icon: string }
+interface ContactItem { name: string; value: string; link?: string }
 
 const Footer: React.FC = () => {
-  const menuItems: NavItem[] = menuData;
+    const menu = menuData as NavItem[];
+    const socials = socialsData as Social[];
+    const contact = contactData as ContactItem[];
+    const year = new Date().getFullYear();
 
-  return (
-    <footer className="dark:bg-gray-950 border-t">
-      <div className="container">
-        <div className="lg:border-x py-20">
-          <div className="lg:max-w-screen-lg lg:mx-auto dotted-side-borders">
-            <div className="lg:max-w-screen-md lg:mx-auto grid gap-16">
-              <div className="grid gap-10 text-center">
-                <h2 className="!mb-0 font-heading">Let&apos;s Build Something Great</h2>
-                <p className="!mb-0 max-w-lg mx-auto">
-                  Have a project in mind? I&apos;m available for freelance work, contract
-                  roles, and technical consulting. Let&apos;s talk.
-                </p>
-                <div className="flex flex-wrap justify-center gap-4">
-                  <Link href="/contact" className="btn">
-                    Get In Touch
-                  </Link>
-                  <a
-                    href="/resume.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-outline"
-                  >
-                    Download CV
-                  </a>
+    return (
+        <footer className="not-prose" style={{ background: '#0e0e0e', color: '#b8b6ad' }}>
+            <div className="container">
+                <div className="pt-16 pb-10">
+                    <div
+                        className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] pb-10 border-b"
+                        style={{ borderColor: 'rgba(255,255,255,0.08)' }}
+                    >
+                        {/* Brand col */}
+                        <div>
+                            <div className="flex items-center gap-2.5">
+                                <span
+                                    className="w-8 h-8 rounded-lg grid place-items-center font-mono"
+                                    style={{ background: '#fff', color: '#0e0e0e', fontSize: '12px', fontWeight: 600, letterSpacing: '-0.04em' }}
+                                >
+                                    DW
+                                </span>
+                                <span className="font-heading text-2xl" style={{ color: '#fff' }}>
+                                    Dike Wisdom
+                                </span>
+                            </div>
+                            <p className="!mt-5 !mb-0 max-w-[320px] text-sm" style={{ color: '#888578' }}>
+                                Full-stack engineer &amp; platform QA. Building, testing, and keeping the systems running.
+                            </p>
+                        </div>
+
+                        {/* Navigate */}
+                        <FooterCol title="Navigate">
+                            {menu.map((m) => (
+                                <li key={m.url}>
+                                    <Link href={m.url} className="no-underline text-sm" style={{ color: '#d6d3c8' }}>
+                                        {m.label}
+                                    </Link>
+                                </li>
+                            ))}
+                        </FooterCol>
+
+                        {/* Connect */}
+                        <FooterCol title="Connect">
+                            {socials.map((s) => (
+                                <li key={s.name}>
+                                    <a
+                                        href={s.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="no-underline text-sm"
+                                        style={{ color: '#d6d3c8' }}
+                                    >
+                                        {s.name}
+                                    </a>
+                                </li>
+                            ))}
+                            <li>
+                                <a href="mailto:me@dikewisdom.com" className="no-underline text-sm" style={{ color: '#d6d3c8' }}>
+                                    Email
+                                </a>
+                            </li>
+                        </FooterCol>
+
+                        {/* Contact */}
+                        <FooterCol title="Contact">
+                            {contact.map((c) => (
+                                <li key={c.name} className="text-sm" style={{ color: '#d6d3c8' }}>
+                                    {c.link ? (
+                                        <a href={c.link} className="no-underline" style={{ color: '#d6d3c8' }}>
+                                            {c.value}
+                                        </a>
+                                    ) : (
+                                        c.value
+                                    )}
+                                </li>
+                            ))}
+                        </FooterCol>
+                    </div>
+
+                    <div
+                        className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 pt-6 font-mono uppercase"
+                        style={{ fontSize: '11.5px', color: '#6e6c64' }}
+                    >
+                        <span>© {year} Dike Wisdom · All Rights Reserved</span>
+                        <span>Built with Next.js · Deployed on Vercel</span>
+                    </div>
                 </div>
-              </div>
-              <div className="grid gap-10">
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-8">
-                  <Link
-                    href="/"
-                    className="w-12 grid transition-opacity hover:opacity-75 duration-300 text-gray-950 dark:text-gray-100"
-                    aria-label="Home"
-                  >
-                    <Logo />
-                  </Link>
-                  <nav aria-label="Footer navigation">
-                    <ul className="flex flex-wrap justify-center gap-8 list-none m-0 py-0">
-                      {menuItems.map((item) => (
-                        <li key={item.url}>
-                          <Link
-                            href={item.url}
-                            className="text-gray-600 dark:text-gray-400 transition-colors duration-300 hover:text-gray-950 dark:hover:text-gray-100 no-underline"
-                          >
-                            {item.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </nav>
-                </div>
-                <div className="border-t pt-8">
-                  <div className="flex flex-col sm:flex-row items-center justify-between gap-8">
-                    <p className="text-gray-600 dark:text-gray-400 !mb-0">
-                      &copy; {new Date().getFullYear()} Dike Wisdom. All rights reserved.
-                    </p>
-                    <Socials />
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
+        </footer>
+    );
 };
+
+const FooterCol: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
+    <div>
+        <h5
+            className="font-mono uppercase !mt-0 !mb-4"
+            style={{ fontSize: '11px', color: '#6e6c64', letterSpacing: '0.14em', fontWeight: 500 }}
+        >
+            {title}
+        </h5>
+        <ul className="list-none !p-0 !m-0 grid gap-2.5">{children}</ul>
+    </div>
+);
 
 export default Footer;

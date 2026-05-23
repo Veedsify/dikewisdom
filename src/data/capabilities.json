@@ -1,0 +1,30 @@
+[
+  {
+    "num": "01 / Frontend",
+    "title": "Production-grade React & Next.js",
+    "blurb": "Performant interfaces with server components, edge rendering, and accessibility baked in.",
+    "stack": ["Next.js", "TypeScript", "Tailwind", "Inertia"],
+    "icon": "frontend"
+  },
+  {
+    "num": "02 / Backend",
+    "title": "Go, Laravel & Node services",
+    "blurb": "ACID-clean transactions, payment integrations and APIs your finance team will trust.",
+    "stack": ["Go", "Node", "Laravel", "Spring"],
+    "icon": "backend"
+  },
+  {
+    "num": "03 / Infra",
+    "title": "AWS, Kubernetes & CI/CD",
+    "blurb": "From VPS hardening to multi-region deployments — keep uptime high without a platform team.",
+    "stack": ["AWS", "Docker", "K8s", "Cloudflare"],
+    "icon": "infra"
+  },
+  {
+    "num": "04 / QA & Pen-Test",
+    "title": "Platform & payment-flow testing",
+    "blurb": "End-to-end QA for casino, betting and fintech products — regression, payment flows, security audits.",
+    "stack": ["E2E", "Regression", "Pen-test", "Reporting"],
+    "icon": "qa"
+  }
+]

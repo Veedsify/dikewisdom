@@ -68,9 +68,9 @@
             "Docker",
             "Cloudflare"
         ],
-        "liveUrl": "https://tmag.vercel.app",
-        "category": "Healthcare",
-        "status": "in-development",
+        "liveUrl": "https://travelmedicineadvisory.com",
+        "category": "HealthCare & Travel",
+        "status": "live",
         "featured": true,
         "highlights": [
             "Kubernetes-orchestrated microservices architecture",

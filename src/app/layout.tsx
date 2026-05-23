@@ -1,18 +1,26 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Geist } from "next/font/google";
+import { Instrument_Serif, Geist, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
-const philosopher = Bricolage_Grotesque({
+const instrumentSerif = Instrument_Serif({
     subsets: ["latin"],
     weight: ["400"],
-    variable: "--font-philosopher",
+    style: ["normal", "italic"],
+    variable: "--font-instrument-serif",
     display: "swap",
 });
 
 const geist = Geist({
     subsets: ["latin"],
     variable: "--font-geist",
+    display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+    subsets: ["latin"],
+    weight: ["400", "500", "600"],
+    variable: "--font-jetbrains-mono",
     display: "swap",
 });
 
@@ -73,7 +81,7 @@ export default function RootLayout({
     return (
         <html
             lang="en"
-            className={`scroll-smooth ${philosopher.variable} ${geist.variable}`}
+            className={`scroll-smooth ${instrumentSerif.variable} ${geist.variable} ${jetbrainsMono.variable}`}
             suppressHydrationWarning
         >
             <head>
@@ -92,7 +100,7 @@ export default function RootLayout({
                     }}
                 />
             </head>
-            <body className="prose prose-gray max-w-none font-sans bg-white dark:bg-gray-950 transition-colors duration-300">
+            <body className="prose prose-gray max-w-none font-sans bg-[var(--bg)] dark:bg-gray-950 transition-colors duration-300">
                 <ThemeProvider>{children}</ThemeProvider>
             </body>
         </html>

@@ -1,118 +1,152 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import SectionTitle from '../SectionTitle';
 import projectsData from '@/data/projects.json';
 import type { Project } from '@/types';
 
 const FeaturedProjects: React.FC = () => {
-  const featured = (projectsData as Project[]).filter((p) => p.featured);
+    const featured = (projectsData as Project[]).filter((p) => p.featured);
 
-  return (
-    <section
-      id="work"
-      aria-labelledby="work-title"
-      className="scroll-mt-20 border-b dark:bg-gray-950"
-    >
-      <div className="container">
-        <div className="lg:border-x">
-          <SectionTitle id="work-title" title="Featured Projects" />
-          <div className="grid gap-20 lg:mx-auto lg:max-w-screen-lg py-14 lg:py-20">
-            {featured.map((project, index) => (
-              <article key={project.slug}>
-                <Link href={`/projects/${project.slug}`}>
-                  <Image
-                    className="animate-reveal w-full rounded-lg hover:opacity-90 transition-opacity duration-300"
+    return (
+        <section
+            id="work"
+            aria-labelledby="work-title"
+            className="scroll-mt-20 border-y not-prose"
+            style={{ background: 'var(--bg-accent)', borderColor: 'var(--line)' }}
+        >
+            <div className="container">
+                <div className="py-28 lg:py-36">
+                    <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-end mb-14 lg:mb-16">
+                        <div>
+                            <span className="eyebrow">/ Selected Work</span>
+                            <h2
+                                id="work-title"
+                                className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl !mt-3 !mb-0 leading-[1]"
+                                style={{ letterSpacing: '-0.02em', fontWeight: 400 }}
+                            >
+                                Six platforms,{' '}
+                                <em className="italic" style={{ color: 'var(--ink-3)' }}>
+                                    still shipping.
+                                </em>
+                            </h2>
+                        </div>
+                        <p className="text-base max-w-md md:ml-auto !m-0" style={{ color: 'var(--ink-3)' }}>
+                            A slice of the systems I&apos;ve architected and maintained — each live in
+                            production, each with real users and real money moving through it.
+                        </p>
+                    </div>
+
+                    <div className="grid gap-6">
+                        {featured.map((p, index) => (
+                            <ProjectCard key={p.slug} project={p} reverse={index % 2 === 1} index={index} />
+                        ))}
+                    </div>
+
+                    <div className="text-center mt-14">
+                        <Link href="/projects" className="btn-editorial ghost">
+                            See all projects <span className="arrow-circle">→</span>
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+interface CardProps { project: Project; reverse: boolean; index: number }
+
+const ProjectCard: React.FC<CardProps> = ({ project, reverse, index }) => {
+    const badge =
+        project.status === 'live'
+            ? `● LIVE · ${project.category.toUpperCase()}`
+            : project.status === 'in-development'
+                ? `● IN-DEV · ${project.category.toUpperCase()}`
+                : `● ${project.category.toUpperCase()}`;
+
+    return (
+        <article
+            className="group overflow-hidden rounded-3xl border grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] transition-all hover:-translate-y-0.5 hover:shadow-[0_24px_48px_-28px_rgba(0,0,0,0.18)]"
+            style={{ background: 'var(--bg-elev)', borderColor: 'var(--line)' }}
+        >
+            <div
+                className={`relative min-h-[320px] lg:min-h-[480px] overflow-hidden ${reverse ? 'lg:order-2' : ''}`}
+                style={{ background: 'linear-gradient(135deg, #e8e4d6, #d9d2bf)' }}
+            >
+                <Image
                     src={project.image}
                     alt={project.title}
-                    width={1200}
-                    height={675}
-                    quality={95}
+                    fill
+                    className="object-cover !m-0"
                     priority={index === 0}
-                    placeholder="blur"
-                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkrHB0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 1200px"
-                  />
-                </Link>
-                <div className="grid md:grid-cols-2 gap-10 mt-8">
-                  <div>
-                    <div className="flex items-center gap-3 mb-2 not-prose">
-                      <span className={`inline-block px-2 py-0.5 text-xs font-medium rounded-full ${
-                        project.status === 'live'
-                          ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300'
-                          : project.status === 'in-development'
-                          ? 'bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-300'
-                          : 'bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-400'
-                      }`}>
-                        {project.status === 'live' ? '✅ Live' : project.status === 'in-development' ? '🔨 In Development' : 'Discontinued'}
-                      </span>
-                      <span className="text-sm text-gray-500 dark:text-gray-500">{project.category}</span>
-                    </div>
-                    <h3 className="mt-0 text-3xl font-medium font-heading">
-                      <Link href={`/projects/${project.slug}`} className="no-underline hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-                        {project.title}
-                      </Link>
-                    </h3>
-                    <p className="text-base text-gray-600 dark:text-gray-400">{project.tagline}</p>
-                    <p className="text-lg">{project.description}</p>
-                    <div className="flex flex-wrap gap-3 mt-4">
-                      <Link
-                        href={`/projects/${project.slug}`}
-                        className="btn btn-sm flex items-center gap-2"
-                        role="button"
-                      >
-                        View Case Study
-                        <span className="w-4">
-                          <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
-                            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
-                          </svg>
-                        </span>
-                      </Link>
-                      {project.liveUrl && (
-                        <a
-                          href={project.liveUrl}
-                          className="btn btn-outline btn-sm flex items-center gap-2"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Live Site
-                          <span className="w-4">
-                            <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
-                              <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
-                            </svg>
-                          </span>
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                  <div>
-                    <div className="not-prose">
-                      <h4 className="text-sm font-medium text-gray-500 dark:text-gray-500 uppercase tracking-wide mb-3">Tech Stack</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {project.techStack.map((tech) => (
-                          <span
-                            key={tech}
-                            className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            ))}
-            <div className="text-center">
-              <Link href="/projects" className="btn">
-                View All Projects
-              </Link>
+                    sizes="(max-width: 1024px) 100vw, 55vw"
+                />
+                <span
+                    className="absolute top-5 left-5 font-mono backdrop-blur-md text-white px-3 py-1.5 rounded-full"
+                    style={{ fontSize: '10.5px', background: 'rgba(14,14,14,0.85)', letterSpacing: '0.06em' }}
+                >
+                    {badge}
+                </span>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+
+            <div className="p-8 lg:p-11 flex flex-col justify-center gap-[18px]">
+                <span
+                    className="font-mono uppercase"
+                    style={{ fontSize: '11px', color: 'var(--ink-4)', letterSpacing: '0.12em' }}
+                >
+                    {project.tagline}
+                </span>
+                <h3
+                    className="font-heading !my-0"
+                    style={{ fontSize: '40px', lineHeight: 1.02, letterSpacing: '-0.015em', fontWeight: 400 }}
+                >
+                    {project.title}
+                </h3>
+                <p className="!my-0 text-[15px] leading-[1.55]" style={{ color: 'var(--ink-2)' }}>
+                    {project.description}
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                    {project.techStack.map((tech) => (
+                        <span
+                            key={tech}
+                            className="font-mono px-2.5 py-1 rounded-full border"
+                            style={{
+                                fontSize: '10.5px',
+                                background: 'var(--bg)',
+                                borderColor: 'var(--line)',
+                                color: 'var(--ink-2)',
+                            }}
+                        >
+                            {tech}
+                        </span>
+                    ))}
+                </div>
+                <div
+                    className="mt-2 pt-4 flex justify-between items-center border-t"
+                    style={{ borderColor: 'var(--line)' }}
+                >
+                    <span
+                        className="font-mono uppercase"
+                        style={{ fontSize: '11px', color: 'var(--ink-4)', letterSpacing: '0.12em' }}
+                    >
+                        {project.liveUrl ? new URL(project.liveUrl).host : project.category}
+                    </span>
+                    <Link
+                        href={`/projects/${project.slug}`}
+                        className="inline-flex items-center gap-2 font-mono no-underline"
+                        style={{ fontSize: '12px', color: 'var(--ink)', fontWeight: 500 }}
+                    >
+                        Open case study
+                        <span
+                            className="w-6 h-6 rounded-full grid place-items-center transition-transform group-hover:-rotate-45"
+                            style={{ background: 'var(--ink)', color: 'var(--bg)', fontSize: '11px' }}
+                        >
+                            ↗
+                        </span>
+                    </Link>
+                </div>
+            </div>
+        </article>
+    );
 };
 
 export default FeaturedProjects;
