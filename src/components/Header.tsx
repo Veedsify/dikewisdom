@@ -32,14 +32,14 @@ const Header: React.FC = () => {
                     borderColor: 'var(--line)',
                 }}
             >
-                <div className="container flex justify-between items-center py-4">
+                <div className="container flex justify-between items-center gap-3 py-3 sm:py-4">
                     <Link
                         href="/"
                         aria-label="Home"
-                        className="flex items-center gap-2.5 no-underline"
+                        className="flex items-center gap-2.5 no-underline min-w-0"
                     >
                         <span
-                            className="w-8 h-8 rounded-lg grid place-items-center font-mono"
+                            className="w-8 h-8 shrink-0 rounded-lg grid place-items-center font-mono"
                             style={{
                                 background: 'var(--line-strong)',
                                 color: 'var(--bg)',
@@ -50,7 +50,10 @@ const Header: React.FC = () => {
                         >
                             DW
                         </span>
-                        <span className="font-heading text-[22px]" style={{ color: 'var(--ink)' }}>
+                        <span
+                            className="hidden sm:inline font-heading text-[20px] lg:text-[22px] truncate"
+                            style={{ color: 'var(--ink)' }}
+                        >
                             Dike Wisdom
                         </span>
                     </Link>
@@ -84,7 +87,7 @@ const Header: React.FC = () => {
                         </ul>
                     </nav>
 
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2 shrink-0">
                         <ThemeToggle />
                         <Link
                             href="/contact"
@@ -95,7 +98,8 @@ const Header: React.FC = () => {
                             Let&apos;s talk <span className="arrow-circle">→</span>
                         </Link>
                         <button
-                            className="lg:hidden cursor-pointer rounded-full p-3 transition-colors border"
+                            type="button"
+                            className="lg:hidden cursor-pointer rounded-full p-2 transition-colors border"
                             style={{
                                 background: 'var(--bg-elev)',
                                 borderColor: 'var(--line)',
@@ -104,10 +108,10 @@ const Header: React.FC = () => {
                             onClick={() => setIsMobileMenuOpen(true)}
                             aria-controls="modal"
                             aria-haspopup="dialog"
+                            aria-label="Open mobile navigation"
                         >
-                            <span className="sr-only">Open Mobile Navigation</span>
-                            <span className="w-5 block">
-                                <svg viewBox="0 0 24 24" fill="currentColor" className="w-full">
+                            <span className="w-5 h-5 block">
+                                <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
                                     <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
                                 </svg>
                             </span>
